@@ -1,10 +1,16 @@
 import React from 'react';
 import './App.css';
+import Video from './components/Video';
 
 function App() {
   return (
     <div className='app'>
-      <h2>Let's Build a Tik Tok Clone🚀!</h2>
+      <div className='app__videos'>
+        <Video />
+        <Video />
+        <Video />
+        <Video />
+      </div>
     </div>
   );
 }
