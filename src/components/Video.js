@@ -3,7 +3,15 @@ import './Video.css';
 import VideoFooter from './VideoFooter';
 import VideoSidebar from './VideoSidebar';
 
-const Video = () => {
+const Video = ({
+  url,
+  channel,
+  description,
+  song,
+  likes,
+  messages,
+  shares,
+}) => {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef(null);
 
@@ -23,14 +31,10 @@ const Video = () => {
         loop
         onClick={onVideoPress}
         ref={videoRef}
-        src='https://v16m.tiktokcdn.com/d394b6f4107753ef5fbc35524a6ccb39/5f4de0fe/video/tos/alisg/tos-alisg-pve-0037/4863973ddeb64580b54ec54243cdbc5e/?a=1180&br=2604&bt=1302&cr=0&cs=0&dr=3&ds=3&er=&l=202008312349340101152280831B559895&lr=tiktok&mime_type=video_mp4&qs=0&rc=MzR3dWQ1dndldzMzPDgzM0ApaWk4PDY5aDs4N2ZkNjRkaGcuYWUwMGM0YzNfLS00LzRzc14vXy80XmItMzMtXzMtNTM6Yw%3D%3D&vl=&vr='
+        src={url}
       ></video>
-      <VideoFooter
-        channel='rafehqazi'
-        description='Check out this dance'
-        song='Usher - Yeah'
-      />
-      <VideoSidebar likes='111' messages='222' shares='333' />
+      <VideoFooter channel={channel} description={description} song={song} />
+      <VideoSidebar likes={likes} messages={messages} shares={shares} />
     </div>
   );
 };
