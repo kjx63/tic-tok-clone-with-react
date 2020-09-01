@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './Video.css';
+import VideoFooter from './VideoFooter';
+// import VideoSidebar from './VideoSidebar';
 
 const Video = () => {
   const [playing, setPlaying] = useState(false);
@@ -21,8 +23,14 @@ const Video = () => {
         loop
         onClick={onVideoPress}
         ref={videoRef}
-        src='https://v16m.tiktokcdn.com/21a1901487c06077aea568fbfcc68bf7/5f4d5824/video/tos/useast2a/tos-useast2a-ve-0068c001/7fe234c83a9c454c91698234986951f6/?a=1233&amp;br=1746&amp;bt=873&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;l=20200831140548010115004061081B792D&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=Mzl1ODp2aXJodzMzZjczM0ApNGQ4aGk6aDs0NztpaGhnNWctMDZeanFsNi5fLS1hMTZzcy5hMjQ2MTQwLS1hYl8zX2E6Yw%3D%3D&amp;vl=&amp;vr='
+        src='https://v16m.tiktokcdn.com/d394b6f4107753ef5fbc35524a6ccb39/5f4de0fe/video/tos/alisg/tos-alisg-pve-0037/4863973ddeb64580b54ec54243cdbc5e/?a=1180&br=2604&bt=1302&cr=0&cs=0&dr=3&ds=3&er=&l=202008312349340101152280831B559895&lr=tiktok&mime_type=video_mp4&qs=0&rc=MzR3dWQ1dndldzMzPDgzM0ApaWk4PDY5aDs4N2ZkNjRkaGcuYWUwMGM0YzNfLS00LzRzc14vXy80XmItMzMtXzMtNTM6Yw%3D%3D&vl=&vr='
       ></video>
+      <VideoFooter
+        channel='rafehqazi'
+        description='Check out this dance'
+        song='Usher - Yeah'
+      />
+      {/* <VideoSidebar /> */}
     </div>
   );
 };
